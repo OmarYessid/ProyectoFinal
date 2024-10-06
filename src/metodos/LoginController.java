@@ -59,6 +59,10 @@ public class LoginController implements Initializable {
                 loadStage("/metodos/principal.fxml", e);
             }
         }
+        if(evt.equals(limpiar)){
+            user.setText("");
+            pass.setText("");
+        }
         
     }
 
