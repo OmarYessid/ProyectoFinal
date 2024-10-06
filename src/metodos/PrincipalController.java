@@ -11,11 +11,9 @@ import javafx.fxml.Initializable;
 /**
  * FXML Controller class
  *
- * @author Omar
+ * @author danie
  */
-public class RegistroController implements Initializable {
-    
-    public static listacuentas lista = new listacuentas();
+public class PrincipalController implements Initializable {
 
     /**
      * Initializes the controller class.
