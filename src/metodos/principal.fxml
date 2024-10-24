@@ -26,17 +26,17 @@
                   <Font name="Arial Bold Italic" size="30.0" />
                </font>
             </Label>
-            <Button mnemonicParsing="false" opacity="0.9" style="-fx-background-color: EBD830; -fx-background-radius: 90;" text="Carrito" textFill="WHITE">
+            <Button fx:id="btnCarrito" mnemonicParsing="false" onAction="#actionEvent" opacity="0.9" style="-fx-background-color: EBD830; -fx-background-radius: 90;" text="Carrito" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="10.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" opacity="0.9" style="-fx-background-color: EBD830; -fx-background-radius: 90;" text="Historial" textFill="WHITE">
+            <Button fx:id="btnHistorial" mnemonicParsing="false" onAction="#actionEvent" opacity="0.9" style="-fx-background-color: EBD830; -fx-background-radius: 90;" text="Historial" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="10.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" opacity="0.9" style="-fx-background-color: EBD830; -fx-background-radius: 90;" text="Cerrar sesion" textFill="WHITE">
+            <Button fx:id="btnClose" mnemonicParsing="false" onAction="#actionEvent" opacity="0.9" style="-fx-background-color: EBD830; -fx-background-radius: 90;" text="Cerrar sesion" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="10.0" />
                </font>

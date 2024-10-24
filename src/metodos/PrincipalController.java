@@ -32,7 +32,7 @@ import javafx.stage.WindowEvent;
 public class PrincipalController implements Initializable {
     
     @FXML
-    private Button btn1,btn2,btn3;
+    private Button btn1,btn2,btn3, btnClose, btnCarrito, btnHistorial;
     
     public void actionEvent (ActionEvent e){
         Object evt = e.getSource();
@@ -44,6 +44,15 @@ public class PrincipalController implements Initializable {
         }
         if(evt.equals(btn3)){
             loadStage("/metodos/productos.fxml", e);
+        }
+        if(evt.equals(btnCarrito)){
+            loadStage("/metodos/Carrito.fxml", e);
+        }
+        if(evt.equals(btnHistorial)){
+            loadStage("/metodos/Historial.fxml", e);
+        }
+        if(evt.equals(btnClose)){
+            loadStage("/metodos/inicio.fxml", e);
         }
     }
 
