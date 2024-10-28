@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.ImageView?>
@@ -36,7 +37,7 @@
                   <Font name="System Bold" size="10.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" opacity="0.9" style="-fx-background-color: EBD830; -fx-background-radius: 90;" text="Atras" textFill="WHITE">
+            <Button fx:id="btnBack" mnemonicParsing="false" onAction="#actionEvent" opacity="0.9" style="-fx-background-color: EBD830; -fx-background-radius: 90;" text="Atras" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="10.0" />
                </font>
@@ -52,7 +53,7 @@
                         <Font name="System Bold Italic" size="13.0" />
                      </font>
                   </Label>
-                  <ImageView fx:id="img1" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="img1" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" />
                   <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                      <children>
                         <Button mnemonicParsing="false" opacity="0.9" style="-fx-background-color: EBD830; -fx-background-radius: 90;" text="Comprar" textFill="WHITE">
@@ -66,6 +67,9 @@
                            </font>
                         </Button>
                      </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
                   </HBox>
                </children>
             </VBox>
@@ -76,7 +80,7 @@
                         <Font name="System Bold Italic" size="13.0" />
                      </font>
                   </Label>
-                  <ImageView fx:id="img2" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="img2" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" />
                   <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                      <children>
                         <Button mnemonicParsing="false" opacity="0.9" style="-fx-background-color: EBD830; -fx-background-radius: 90;" text="Comprar" textFill="WHITE">
@@ -90,6 +94,9 @@
                            </font>
                         </Button>
                      </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
                   </HBox>
                </children>
             </VBox>
@@ -100,7 +107,7 @@
                         <Font name="System Bold Italic" size="13.0" />
                      </font>
                   </Label>
-                  <ImageView fx:id="img3" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="img3" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" />
                   <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                      <children>
                         <Button mnemonicParsing="false" opacity="0.9" style="-fx-background-color: EBD830; -fx-background-radius: 90;" text="Comprar" textFill="WHITE">
@@ -114,6 +121,9 @@
                            </font>
                         </Button>
                      </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
                   </HBox>
                </children>
             </VBox>
