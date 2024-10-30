@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="ProyectoFinal.jar" size="18073569" download="eager" />
+    <jar href="ProyectoFinal.jar" size="18073819" download="eager" />
   </resources>
   <jfx:javafx-desc  width="800" height="600" main-class="metodos.main"  name="ProyectoFinal" />
   <update check="always"/>

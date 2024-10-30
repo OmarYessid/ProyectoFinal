@@ -35,7 +35,9 @@ public class pilaCarrito {
     public float valorTotal(){
         float total = 0;
         for(vehiculo v : pila){
-            total += v.precio;
+            if(v.comprador.equals(LoginController.nom)){
+                total += v.precio;
+            }
         }
         return total;
     }
@@ -46,6 +48,7 @@ public class pilaCarrito {
                 pila.remove(elim);
                 CarritoController.tablist.remove(elim);
                 JOptionPane.showMessageDialog(null,"Producto eliminado"); 
+                break;
             }
         }
     }
