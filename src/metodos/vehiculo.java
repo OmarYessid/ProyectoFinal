@@ -9,26 +9,17 @@ package metodos;
  * @author Omar
  */
 public class vehiculo {
-    int id;
-    String nombre, marca;
+    String nombre, marca, comprador;
     float precio;
 
     public vehiculo() {
     }
 
-    public vehiculo(int id, String nombre, String marca, float precio) {
-        this.id = id;
+    public vehiculo(String nombre, String marca, float precio, String comprador) {
         this.nombre = nombre;
         this.marca = marca;
         this.precio = precio;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
+        this.comprador = comprador;
     }
 
     public String getNombre() {
@@ -53,6 +44,14 @@ public class vehiculo {
 
     public void setPrecio(float precio) {
         this.precio = precio;
+    }
+
+    public String getComprador() {
+        return comprador;
+    }
+
+    public void setComprador(String comprador) {
+        this.comprador = comprador;
     }
     
     

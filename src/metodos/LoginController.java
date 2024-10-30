@@ -34,6 +34,7 @@ import javax.swing.JOptionPane;
  */
 public class LoginController implements Initializable {
     public static user usuario;
+    public static String nom;
     public static listacuentas lista = RegistroController.lista;
     
     @FXML
@@ -56,6 +57,7 @@ public class LoginController implements Initializable {
             if(usuario == null){
                 JOptionPane.showMessageDialog(null, "Datos erroneos");
             }else{
+                nom = nombre;
                 loadStage("/metodos/principal.fxml", e);
             }
         }

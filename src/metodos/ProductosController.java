@@ -36,21 +36,33 @@ public class ProductosController implements Initializable {
     
     public static String nom1, nom2, nom3;
     public static Image ima1, ima2, ima3;
+    public static float p1, p2, p3;
     
     @FXML
-    private Label lb1,lb2,lb3;
+    private Label lb1,lb2,lb3, precio1, precio2, precio3;
     
     @FXML
     private ImageView img1, img2, img3;
     
     @FXML
-    private Button btnBack;
+    private Button btnBack, btnCarrito, btnHistorial, btnCar1, btnCar2, btnCar3, btnCom1, btnCom2, btnCom3;
+;
     
     public void actionEvent (ActionEvent e){
         Object evt = e.getSource();
         
         if(evt.equals(btnBack)){
             loadStage("/metodos/principal.fxml", e);
+        }
+        if(evt.equals(btnCarrito)){
+            loadStage("/metodos/Carrito.fxml", e);
+        }
+        if(evt.equals(btnHistorial)){
+            loadStage("/metodos/Historial.fxml", e);
+        }
+        if(evt.equals(btnCar1)){
+            vehiculo v = new vehiculo(nom1, PrincipalController.marca, p1, LoginController.nom);
+            PrincipalController.pila.setPushProductos(v);
         }
         
     }
@@ -66,6 +78,9 @@ public class ProductosController implements Initializable {
         img2.setImage(ima2);
         lb3.setText(nom3);
         img3.setImage(ima3);
+        precio1.setText(Float.toString(p1)+ " USD");
+        precio2.setText(Float.toString(p2)+ " USD");
+        precio3.setText(Float.toString(p3)+ " USD");
         // TODO
     }    
     

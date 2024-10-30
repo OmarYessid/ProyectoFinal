@@ -32,36 +32,52 @@ import javafx.stage.WindowEvent;
  */
 public class PrincipalController implements Initializable {
     
+    public static String marca;
+    
+    public static pilaCarrito pila = new pilaCarrito();
+    
     @FXML
     private Button btn1,btn2,btn3, btnClose, btnCarrito, btnHistorial;
     
     public void actionEvent (ActionEvent e){
         Object evt = e.getSource();
         if(evt.equals(btn1)){
+            marca = "Ferrari";
             ProductosController.nom1 = "Ferrari sf90";
             ProductosController.nom2 = "Ferrari Purosangue";
             ProductosController.nom3 = "Ferrari Roma";
             ProductosController.ima1 = new Image(getClass().getResource("/metodos/images/sf90.jpg").toExternalForm());
             ProductosController.ima2 = new Image(getClass().getResource("/metodos/images/purosangue.jpg").toExternalForm());
             ProductosController.ima3 = new Image(getClass().getResource("/metodos/images/roma.jpg").toExternalForm());
+            ProductosController.p1 = 600000;
+            ProductosController.p2 = 480000;
+            ProductosController.p3 = 280000;
             loadStage("/metodos/productos.fxml", e);
         }
         if(evt.equals(btn2)){
+            marca = "Lamborghini";
             ProductosController.nom1 = "Lamborghini Aventador";
             ProductosController.nom2 = "Lamborghini Urus";
             ProductosController.nom3 = "Lamborghini Revuelto";
             ProductosController.ima1 = new Image(getClass().getResource("/metodos/images/aventador.jpg").toExternalForm());
             ProductosController.ima2 = new Image(getClass().getResource("/metodos/images/urus.jpg").toExternalForm());
             ProductosController.ima3 = new Image(getClass().getResource("/metodos/images/revuelto.jpg").toExternalForm());
+            ProductosController.p1 = 500000;
+            ProductosController.p2 = 258000;
+            ProductosController.p3 = 604000;
             loadStage("/metodos/productos.fxml", e);
         }
         if(evt.equals(btn3)){
+            marca = "McLaren";
             ProductosController.nom1 = "McLaren P1";
             ProductosController.nom2 = "McLaren Senna";
             ProductosController.nom3 = "McLaren 765LT";
             ProductosController.ima1 = new Image(getClass().getResource("/metodos/images/p1.jpg").toExternalForm());
             ProductosController.ima2 = new Image(getClass().getResource("/metodos/images/senna.jpg").toExternalForm());
             ProductosController.ima3 = new Image(getClass().getResource("/metodos/images/765LT.jpg").toExternalForm());
+            ProductosController.p1 = 1300000;
+            ProductosController.p2 = 2500000;
+            ProductosController.p3 = 465000;
             loadStage("/metodos/productos.fxml", e);
         }
         if(evt.equals(btnCarrito)){
