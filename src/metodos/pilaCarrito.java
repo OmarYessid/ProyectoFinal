@@ -23,10 +23,29 @@ public class pilaCarrito {
         pila.push(p);
         JOptionPane.showMessageDialog(null,"Agregado al carrito exitosamente!");   
     }
-    public void eliminarProducto (String nom){
+    
+    public void cargarTabla(){
+        for(vehiculo cargar : pila){
+            if(cargar.comprador.equals(LoginController.nom)){
+                CarritoController.tablist.add(cargar);
+            }
+        }
+    }
+    
+    public float valorTotal(){
+        float total = 0;
+        for(vehiculo v : pila){
+            total += v.precio;
+        }
+        return total;
+    }
+    
+    public void eliminarProducto (int id){
         for(vehiculo elim : pila){
-            if(elim.nombre.equals(nom)){
+            if(elim.id == id){
                 pila.remove(elim);
+                CarritoController.tablist.remove(elim);
+                JOptionPane.showMessageDialog(null,"Producto eliminado"); 
             }
         }
     }

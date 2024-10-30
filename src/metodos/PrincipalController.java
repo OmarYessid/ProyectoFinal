@@ -43,6 +43,9 @@ public class PrincipalController implements Initializable {
         Object evt = e.getSource();
         if(evt.equals(btn1)){
             marca = "Ferrari";
+            ProductosController.id1 = 1;
+            ProductosController.id2 = 2;
+            ProductosController.id3 = 3;
             ProductosController.nom1 = "Ferrari sf90";
             ProductosController.nom2 = "Ferrari Purosangue";
             ProductosController.nom3 = "Ferrari Roma";
@@ -56,6 +59,9 @@ public class PrincipalController implements Initializable {
         }
         if(evt.equals(btn2)){
             marca = "Lamborghini";
+            ProductosController.id1 = 4;
+            ProductosController.id2 = 5;
+            ProductosController.id3 = 6;
             ProductosController.nom1 = "Lamborghini Aventador";
             ProductosController.nom2 = "Lamborghini Urus";
             ProductosController.nom3 = "Lamborghini Revuelto";
@@ -69,6 +75,9 @@ public class PrincipalController implements Initializable {
         }
         if(evt.equals(btn3)){
             marca = "McLaren";
+            ProductosController.id1 = 7;
+            ProductosController.id2 = 8;
+            ProductosController.id3 = 9;
             ProductosController.nom1 = "McLaren P1";
             ProductosController.nom2 = "McLaren Senna";
             ProductosController.nom3 = "McLaren 765LT";

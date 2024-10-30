@@ -34,6 +34,7 @@ import javafx.stage.WindowEvent;
  */
 public class ProductosController implements Initializable {
     
+    public static int id1, id2, id3;
     public static String nom1, nom2, nom3;
     public static Image ima1, ima2, ima3;
     public static float p1, p2, p3;
@@ -61,7 +62,15 @@ public class ProductosController implements Initializable {
             loadStage("/metodos/Historial.fxml", e);
         }
         if(evt.equals(btnCar1)){
-            vehiculo v = new vehiculo(nom1, PrincipalController.marca, p1, LoginController.nom);
+            vehiculo v = new vehiculo(id1, nom1, PrincipalController.marca, p1, LoginController.nom);
+            PrincipalController.pila.setPushProductos(v);
+        }
+        if(evt.equals(btnCar2)){
+            vehiculo v = new vehiculo(id2, nom2, PrincipalController.marca, p2, LoginController.nom);
+            PrincipalController.pila.setPushProductos(v);
+        }
+        if(evt.equals(btnCar3)){
+            vehiculo v = new vehiculo(id3, nom3, PrincipalController.marca, p3, LoginController.nom);
             PrincipalController.pila.setPushProductos(v);
         }
         

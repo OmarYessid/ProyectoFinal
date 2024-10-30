@@ -57,10 +57,10 @@ public class listacuentas {
     
     public void crearcuenta(String nombre, String contraseña){
         user info = crearnodo(nombre, contraseña);
-        if(info != null){
+        if(cab != null){
+            info.sig = cab;
             cab = info;
         }else{
-            info.sig = cab;
             cab = info;
         }
     }

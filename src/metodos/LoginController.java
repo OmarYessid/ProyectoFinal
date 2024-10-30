@@ -35,7 +35,6 @@ import javax.swing.JOptionPane;
 public class LoginController implements Initializable {
     public static user usuario;
     public static String nom;
-    public static listacuentas lista = RegistroController.lista;
     
     @FXML
     private TextField user;
@@ -53,7 +52,7 @@ public class LoginController implements Initializable {
         if(evt.equals(ingresar)){
             String nombre = user.getText();
             String contraseña = pass.getText();
-            usuario = lista.logcuenta(nombre, contraseña);
+            usuario = RegistroController.lista.logcuenta(nombre, contraseña);
             if(usuario == null){
                 JOptionPane.showMessageDialog(null, "Datos erroneos");
             }else{

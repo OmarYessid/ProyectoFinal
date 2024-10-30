@@ -9,19 +9,29 @@ package metodos;
  * @author Omar
  */
 public class vehiculo {
+    int id;
     String nombre, marca, comprador;
     float precio;
 
     public vehiculo() {
     }
 
-    public vehiculo(String nombre, String marca, float precio, String comprador) {
+    public vehiculo(int id, String nombre, String marca, float precio, String comprador) {
+        this.id = id;
         this.nombre = nombre;
         this.marca = marca;
         this.precio = precio;
         this.comprador = comprador;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+    
     public String getNombre() {
         return nombre;
     }

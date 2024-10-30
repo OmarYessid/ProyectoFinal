@@ -10,6 +10,8 @@ import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.application.Platform;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.event.EventHandler;
@@ -20,6 +22,10 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 import javafx.stage.WindowEvent;
@@ -33,18 +39,36 @@ import javax.swing.JOptionPane;
 public class CarritoController implements Initializable {
     
     @FXML
+    private TableView<vehiculo> tabla;
+    @FXML
+    private TableColumn<vehiculo, String> id;
+    @FXML
+    private TableColumn<vehiculo, String> nom;
+    @FXML
+    private TableColumn<vehiculo, String> mar;
+    @FXML
+    private TableColumn<vehiculo, String> pre;
+    
+    public static ObservableList<vehiculo> tablist = FXCollections.observableArrayList();
+    
+    @FXML
     private Button btnBack, btnCarrito, btnHistorial;
+    
+    @FXML
+    private Label lbTotal;
     
     public void actionEvent (ActionEvent e){
         Object evt = e.getSource();
         
         if(evt.equals(btnHistorial)){
+            tablist.clear();
             loadStage("/metodos/Historial.fxml", e);
         }
         if(evt.equals(btnCarrito)){
             JOptionPane.showMessageDialog(null, "Ya se encuentra en la pagina del carrito!");
         }
         if(evt.equals(btnBack)){
+            tablist.clear();
             loadStage("/metodos/principal.fxml", e);
         }
     }
@@ -55,6 +79,14 @@ public class CarritoController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        PrincipalController.pila.cargarTabla();
+        float total = PrincipalController.pila.valorTotal();
+        lbTotal.setText(Float.toString(total));
+        id.setCellValueFactory(new PropertyValueFactory<vehiculo, String>("id"));
+        nom.setCellValueFactory(new PropertyValueFactory<vehiculo, String>("nombre"));
+        mar.setCellValueFactory(new PropertyValueFactory<vehiculo, String>("marca"));
+        pre.setCellValueFactory(new PropertyValueFactory<vehiculo, String>("precio"));
+        tabla.setItems(tablist);
     }    
     
         private void loadStage(String url, Event event){
