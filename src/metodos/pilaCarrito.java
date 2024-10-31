@@ -70,6 +70,8 @@ public class pilaCarrito {
             vehiculo elem = pila.pop();
             if (!elem.comprador.equals(LoginController.nom)){
                 nuevaPila.push(elem);
+            }else{
+                PrincipalController.cola.añadirProducto(elem);
             }
         }
         while(!nuevaPila.isEmpty()){

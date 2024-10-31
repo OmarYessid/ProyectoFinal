@@ -36,6 +36,8 @@ public class PrincipalController implements Initializable {
     
     public static pilaCarrito pila = new pilaCarrito();
     
+    public static colaHistorial cola = new colaHistorial();
+    
     @FXML
     private Button btn1,btn2,btn3, btnClose, btnCarrito, btnHistorial;
     
