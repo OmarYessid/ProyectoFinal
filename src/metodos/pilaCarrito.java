@@ -52,4 +52,29 @@ public class pilaCarrito {
             }
         }
     }
+    
+    public void comprarProducto (int id){
+        for(vehiculo elim : pila){
+            if(elim.id == id){
+                pila.remove(elim);
+                CarritoController.tablist.remove(elim);
+                JOptionPane.showMessageDialog(null,"Producto comprado!"); 
+                break;
+            }
+        }
+    }
+    
+    public void comprarTodo(){
+        Stack<vehiculo> nuevaPila = new Stack<>();
+        while(!pila.isEmpty()){
+            vehiculo elem = pila.pop();
+            if (!elem.comprador.equals(LoginController.nom)){
+                nuevaPila.push(elem);
+            }
+        }
+        while(!nuevaPila.isEmpty()){
+            pila.push(nuevaPila.pop());
+        }
+        JOptionPane.showMessageDialog(null, "Se compraron todos los productos");
+    }
 }

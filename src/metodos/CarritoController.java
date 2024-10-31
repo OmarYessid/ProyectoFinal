@@ -68,6 +68,20 @@ public class CarritoController implements Initializable {
             float total = PrincipalController.pila.valorTotal();
             lbTotal.setText(Float.toString(total));
         }
+        if(evt.equals(btnComprarT)){
+            tablist.clear();
+            PrincipalController.pila.comprarTodo();
+            float total = PrincipalController.pila.valorTotal();
+            lbTotal.setText(Float.toString(total));
+        }
+        if(evt.equals(btnComprarI)){
+            int id = tabla.getSelectionModel().getSelectedItem().getId();
+            PrincipalController.pila.comprarProducto(id);
+            tablist.clear();
+            PrincipalController.pila.cargarTabla();
+            float total = PrincipalController.pila.valorTotal();
+            lbTotal.setText(Float.toString(total));
+        }
         if(evt.equals(btnHistorial)){
             tablist.clear();
             loadStage("/metodos/Historial.fxml", e);
