@@ -23,4 +23,11 @@ public class colaHistorial {
         cola.add(p);
         System.out.println(cola.peek());
     }
+    public void cargarCola(){
+        for(vehiculo cargar : cola){
+            if(cargar.comprador.equals(LoginController.nom)){
+                HistorialController.tablist.add(cargar);
+            }
+        }
+    }
 }

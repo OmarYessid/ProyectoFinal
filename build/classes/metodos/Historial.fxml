@@ -45,12 +45,12 @@
       </HBox>
       <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0" style="-fx-background-color: D9D9D9;" GridPane.rowIndex="1">
          <children>
-            <TableView prefHeight="300.0" prefWidth="600.0">
+            <TableView fx:id="tabla" prefHeight="300.0" prefWidth="600.0">
               <columns>
-                <TableColumn prefWidth="150.0" text="ID" />
-                <TableColumn prefWidth="150.0" text="Nombre" />
-                  <TableColumn prefWidth="150.0" text="Marca" />
-                  <TableColumn prefWidth="150.0" text="Precio" />
+                <TableColumn fx:id="id" prefWidth="150.0" text="ID" />
+                <TableColumn fx:id="nom" prefWidth="150.0" text="Nombre" />
+                  <TableColumn fx:id="mar" prefWidth="150.0" text="Marca" />
+                  <TableColumn fx:id="pre" prefWidth="150.0" text="Precio" />
               </columns>
             </TableView>
          </children>

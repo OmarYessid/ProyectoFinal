@@ -44,7 +44,7 @@ public class pilaCarrito {
     
     public void eliminarProducto (int id){
         for(vehiculo elim : pila){
-            if(elim.id == id){
+            if(elim.id == id && elim.comprador.equals(LoginController.nom)){
                 pila.remove(elim);
                 CarritoController.tablist.remove(elim);
                 JOptionPane.showMessageDialog(null,"Producto eliminado"); 
@@ -54,10 +54,11 @@ public class pilaCarrito {
     }
     
     public void comprarProducto (int id){
-        for(vehiculo elim : pila){
-            if(elim.id == id){
-                pila.remove(elim);
-                CarritoController.tablist.remove(elim);
+        for(vehiculo comprar : pila){
+            if(comprar.id == id && comprar.comprador.equals(LoginController.nom)){
+                PrincipalController.cola.añadirProducto(comprar);
+                pila.remove(comprar);
+                CarritoController.tablist.remove(comprar);
                 JOptionPane.showMessageDialog(null,"Producto comprado!"); 
                 break;
             }
