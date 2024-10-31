@@ -4,6 +4,9 @@
  */
 package metodos;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import javax.swing.JOptionPane;
 
 /**
@@ -62,6 +65,12 @@ public class listacuentas {
             cab = info;
         }else{
             cab = info;
+        }
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("usuarios.txt", true))) {
+            writer.write("Usuario: " + nombre + ", Contraseña: " + contraseña);
+            writer.newLine(); 
+        } catch (IOException e) {
+            System.out.println("Error al escribir en el archivo: " + e.getMessage());
         }
     }
     
