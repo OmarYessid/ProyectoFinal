@@ -26,6 +26,7 @@ import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 import javafx.stage.WindowEvent;
+import javax.swing.JOptionPane;
 
 /**
  * FXML Controller class
@@ -72,6 +73,21 @@ public class ProductosController implements Initializable {
         if(evt.equals(btnCar3)){
             vehiculo v = new vehiculo(id3, nom3, PrincipalController.marca, p3, LoginController.nom);
             PrincipalController.pila.setPushProductos(v);
+        }
+        if(evt.equals(btnCom1)){
+            vehiculo v = new vehiculo(id1, nom1, PrincipalController.marca, p1, LoginController.nom);
+            PrincipalController.cola.añadirProducto(v);
+            JOptionPane.showMessageDialog(null, "Producto comprado exitosamente!");
+        }
+        if(evt.equals(btnCom2)){
+            vehiculo v = new vehiculo(id2, nom2, PrincipalController.marca, p2, LoginController.nom);
+            PrincipalController.cola.añadirProducto(v);
+            JOptionPane.showMessageDialog(null, "Producto comprado exitosamente!");
+        }
+        if(evt.equals(btnCom3)){
+            vehiculo v = new vehiculo(id3, nom3, PrincipalController.marca, p3, LoginController.nom);
+            PrincipalController.cola.añadirProducto(v);
+            JOptionPane.showMessageDialog(null, "Producto comprado exitosamente!");
         }
         
     }
