@@ -42,7 +42,7 @@ public class colaDeseos {
     public void cargarTabla(){
         for(vehiculo cargar : cola){
             if(cargar.comprador.equals(LoginController.nom)){
-                CarritoController.tablist.add(cargar);
+                DeseosController.tablist.add(cargar);
             }
         }
     }
@@ -51,7 +51,7 @@ public class colaDeseos {
         for(vehiculo elim : cola){
             if(elim.id == id && elim.comprador.equals(LoginController.nom)){
                 cola.remove(elim);
-                CarritoController.tablist.remove(elim);
+                DeseosController.tablist.remove(elim);
                 JOptionPane.showMessageDialog(null,"Producto eliminado"); 
                 break;
             }
@@ -63,20 +63,10 @@ public class colaDeseos {
             if(comprar.id == id && comprar.comprador.equals(LoginController.nom)){
                 PrincipalController.cola.añadirProducto(comprar);
                 cola.remove(comprar);
-                CarritoController.tablist.remove(comprar);
+                DeseosController.tablist.remove(comprar);
                 JOptionPane.showMessageDialog(null,"Producto comprado!"); 
                 break;
             }
         }
-    }
-    
-    public void comprarTodo(){
-        for(vehiculo comprar : cola){         
-            if (comprar.comprador.equals(LoginController.nom)){
-                PrincipalController.cola.añadirProducto(comprar);
-                cola.remove(comprar);
-            }
-        }
-        JOptionPane.showMessageDialog(null, "Se compraron todos los productos");
     }
 }

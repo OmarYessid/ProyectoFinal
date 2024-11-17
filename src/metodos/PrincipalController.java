@@ -38,8 +38,10 @@ public class PrincipalController implements Initializable {
     
     public static colaHistorial cola = new colaHistorial();
     
+    public static colaDeseos cola2 = new colaDeseos();
+    
     @FXML
-    private Button btn1,btn2,btn3, btnClose, btnCarrito, btnHistorial;
+    private Button btn1,btn2,btn3, btnClose, btnCarrito, btnHistorial, btnDeseos;
     
     public void actionEvent (ActionEvent e){
         Object evt = e.getSource();
@@ -99,6 +101,9 @@ public class PrincipalController implements Initializable {
         }
         if(evt.equals(btnClose)){
             loadStage("/metodos/inicio.fxml", e);
+        }
+        if(evt.equals(btnDeseos)){
+            loadStage("/metodos/Deseos.fxml", e);
         }
     }
 

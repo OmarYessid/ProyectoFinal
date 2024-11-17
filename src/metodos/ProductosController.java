@@ -47,8 +47,8 @@ public class ProductosController implements Initializable {
     private ImageView img1, img2, img3;
     
     @FXML
-    private Button btnBack, btnCarrito, btnHistorial, btnCar1, btnCar2, btnCar3, btnCom1, btnCom2, btnCom3;
-;
+    private Button btnBack, btnCarrito, btnHistorial, btnDeseos, btnCar1, btnCar2, btnCar3, btnCom1, btnCom2, btnCom3,
+            btnDes1, btnDes2, btnDes3;
     
     public void actionEvent (ActionEvent e){
         Object evt = e.getSource();
@@ -62,6 +62,9 @@ public class ProductosController implements Initializable {
         if(evt.equals(btnHistorial)){
             loadStage("/metodos/Historial.fxml", e);
         }
+        if(evt.equals(btnDeseos)){
+            loadStage("/metodos/Deseos.fxml", e);
+        }
         if(evt.equals(btnCar1)){
             vehiculo v = new vehiculo(id1, nom1, PrincipalController.marca, p1, LoginController.nom);
             PrincipalController.pila.setPushProductos(v);
@@ -73,6 +76,18 @@ public class ProductosController implements Initializable {
         if(evt.equals(btnCar3)){
             vehiculo v = new vehiculo(id3, nom3, PrincipalController.marca, p3, LoginController.nom);
             PrincipalController.pila.setPushProductos(v);
+        }
+        if(evt.equals(btnDes1)){
+            vehiculo v = new vehiculo(id1, nom1, PrincipalController.marca, p1, LoginController.nom);
+            PrincipalController.cola2.agregarProducto(v);
+        }
+        if(evt.equals(btnDes2)){
+            vehiculo v = new vehiculo(id2, nom2, PrincipalController.marca, p2, LoginController.nom);
+            PrincipalController.cola2.agregarProducto(v);
+        }
+        if(evt.equals(btnDes3)){
+            vehiculo v = new vehiculo(id3, nom3, PrincipalController.marca, p3, LoginController.nom);
+            PrincipalController.cola2.agregarProducto(v);
         }
         if(evt.equals(btnCom1)){
             vehiculo v = new vehiculo(id1, nom1, PrincipalController.marca, p1, LoginController.nom);

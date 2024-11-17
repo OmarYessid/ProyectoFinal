@@ -31,6 +31,11 @@
                   <Font name="System Bold" size="10.0" />
                </font>
             </Button>
+            <Button fx:id="btnDeseos" mnemonicParsing="false" onAction="#actionEvent" style="-fx-background-color: EBD830; -fx-background-radius: 90;" text="Deseos" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="10.0" />
+               </font>
+            </Button>
             <Button fx:id="btnHistorial" mnemonicParsing="false" onAction="#actionEvent" opacity="0.9" style="-fx-background-color: EBD830; -fx-background-radius: 90;" text="Historial" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="10.0" />

@@ -38,7 +38,7 @@ import javax.swing.JOptionPane;
 public class HistorialController implements Initializable {
     
     @FXML
-    private Button btnBack, btnCarrito, btnHistorial;
+    private Button btnBack, btnCarrito, btnHistorial, btnDeseos;
     
     @FXML
     private TableView<vehiculo> tabla;
@@ -67,6 +67,9 @@ public class HistorialController implements Initializable {
         if(evt.equals(btnBack)){
             tablist.clear();
             loadStage("/metodos/principal.fxml", e);
+        }
+        if(evt.equals(btnDeseos)){
+            loadStage("/metodos/Deseos.fxml", e);
         }
     }
     

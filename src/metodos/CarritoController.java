@@ -52,7 +52,7 @@ public class CarritoController implements Initializable {
     public static ObservableList<vehiculo> tablist = FXCollections.observableArrayList();
     
     @FXML
-    private Button btnBack, btnCarrito, btnHistorial, btnEliminar, btnComprarI, btnComprarT;
+    private Button btnBack, btnCarrito, btnHistorial, btnEliminar, btnComprarI, btnComprarT, btnDeseos;
     
     @FXML
     private Label lbTotal;
@@ -92,6 +92,9 @@ public class CarritoController implements Initializable {
         if(evt.equals(btnBack)){
             tablist.clear();
             loadStage("/metodos/principal.fxml", e);
+        }
+        if(evt.equals(btnDeseos)){
+            loadStage("/metodos/Deseos.fxml", e);
         }
     }
     
