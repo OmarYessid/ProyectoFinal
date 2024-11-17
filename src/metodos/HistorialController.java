@@ -29,7 +29,6 @@ import javafx.stage.Stage;
 import javafx.stage.Window;
 import javafx.stage.WindowEvent;
 import javax.swing.JOptionPane;
-import static metodos.CarritoController.tablist;
 
 /**
  * FXML Controller class

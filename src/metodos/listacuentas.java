@@ -69,7 +69,7 @@ public class listacuentas {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter("usuarios.txt", true))) {
             writer.write("Usuario: " + nombre + ", Contraseña: " + contraseña);
             writer.newLine(); 
-        } catch (IOException e) {
+        }catch (IOException e) {
             System.out.println("Error al escribir en el archivo: " + e.getMessage());
         }
     }
