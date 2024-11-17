@@ -3,6 +3,8 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
@@ -21,12 +23,17 @@
    <children>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0" style="-fx-background-color: D30C0C;">
          <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/logo.png" />
+               </image>
+            </ImageView>
             <Label text="Bienvenido a SportDrive" textFill="#0d0d0d">
                <HBox.margin>
                   <Insets />
                </HBox.margin>
                <font>
-                  <Font name="Arial Bold Italic" size="30.0" />
+                  <Font name="Arial Bold Italic" size="20.0" />
                </font>
             </Label>
             <Button fx:id="registrarse" mnemonicParsing="false" onAction="#actionEvent" opacity="0.9" style="-fx-background-radius: 90; -fx-background-color: EBD830;" text="Registrarse" textFill="WHITE">
